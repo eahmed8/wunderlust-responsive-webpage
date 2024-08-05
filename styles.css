@@ -1,0 +1,912 @@
+/* Eram Ahmed */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+/* Root Styles / Branded Color Variables */
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222;
+    --light-gray: #EAEAEA;
+    --white: #fff;
+    --black: #000;
+}
+
+:focus {
+    background-color: var(--yellow);
+    border-color: var(--dark-gray);
+    border-width: 4px;
+}
+
+/* Branded Font Styles */
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4,
+p,
+q,
+small,
+nav,
+button,
+form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+p {
+    line-height: 1.55em;
+}
+
+/* Screen Reader Accessible Only*/
+#skip,
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*Header styles*/
+header {
+    background-image: linear-gradient(var(--teal), white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-bottom: 3em;
+}
+
+header img {
+    grid-column: 1;
+    grid-row: 1;
+    padding-bottom: 1em;
+    width: 90%;
+    padding-top: 1em;
+}
+
+nav {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    margin-top: .2em;
+}
+
+#menu-toggle {
+    position: relative;
+    margin-top: 25px;
+}
+
+#menu-toggle label {
+    background-color: var(--yellow);
+    display: block;
+    width: 150px;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+#menu-toggle input:checked+label {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#menu-toggle input:checked+label+ul {
+    display: block;
+}
+
+#menu-toggle ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    position: absolute;
+}
+
+#menu-toggle a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--white);
+    display: block;
+    padding: 1em;
+    background-color: var(--teal);
+}
+
+#menu-toggle a:hover {
+    color: var(--black);
+    background-color: var(--yellow);
+}
+
+#menu-toggle label:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+[type="checkbox"] {
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+
+h1 {
+    grid-column: span 2;
+    grid-row: 2;
+    padding-left: .5em;
+    padding-bottom: .25rem;
+    font-size: 2.85em;
+    font-weight: 400;
+    margin-top: .5em;
+}
+
+header p {
+    grid-column: span 2;
+    grid-row: 3;
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+/* Intro Styles */
+h2 {
+    padding-left: .75em;
+    font-size: 2.35em;
+    font-weight: 300;
+    padding-bottom: .25em;
+}
+
+#intro p {
+    padding-left: 1.75em;
+    padding-right: 2em;
+}
+
+#img-grid {
+    margin: auto;
+}
+
+#img-grid img {
+    padding-top: .75em;
+    width: 100%;
+}
+
+#img-grid:last-child {
+    padding-bottom: 1.5em;
+}
+
+/* Plan Your Trip Styles */
+#plan {
+    background-color: var(--yellow);
+    padding-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.65em;
+    padding-left: 5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+#plan img {
+    padding: 1em;
+    width: 50%;
+}
+
+#plan-svg {
+    justify-content: center;
+    align-content: center;
+}
+
+#plan section {
+    background-color: var(--teal);
+    padding-top: .5em;
+    max-width: 280px;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    border-radius: 8px;
+    border: solid white;
+    margin-left: auto;
+    margin-right: auto;
+    height: 220px;
+}
+
+/* Testimonials Styles */
+#testimonials section {
+    align-content: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2em;
+    width: 300px;
+}
+
+#testimonials h4 {
+    padding-top: 1em;
+    font-size: 1.35em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#testimonials p {
+    padding: .25em;
+}
+
+/* About Styles */
+#about {
+    background-color: var(--blue);
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#about h4 {
+    padding-top: .5ch;
+    font-weight: 600;
+}
+
+#about p {
+    font-size: .9em;
+}
+
+#about img {
+    width: 60%;
+}
+
+/* Contact Styles */
+#contact {
+    padding-bottom: 1.5em;
+}
+
+.form-required {
+    font-family: 'Montserrat';
+    font-size: .5em;
+    font-style: italic;
+    font-weight: 200;
+}
+
+form {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    margin: auto;
+}
+
+input,
+label,
+fieldset {
+    display: block;
+    width: 86%;
+    font-weight: 500;
+}
+
+input {
+    height: 2.5em;
+    margin-bottom: 1em;
+    border-color: var(--purple);
+    border-radius: 0;
+}
+
+form .required {
+    display: inline-block;
+    color: var(--purple);
+    font-size: .95em;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+}
+
+#prefEmail,
+#prefText,
+#prefPhone {
+    accent-color: var(--purple);
+    width: 35px;
+}
+
+#destination,
+#travelTime {
+    border-radius: 0;
+    border-color: var(--purple);
+    max-width: 300px;
+    width: 89%;
+    height: 2.8em;
+    background-color: var(--white);
+    margin-bottom: 1em;
+}
+
+#mySubmit {
+    background-color: var(--purple);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 1em;
+    border: none;
+}
+
+#mySubmit:focus {
+    border-color: var(--yellow);
+    border-width: 2px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--light-gray);
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    font-size: .75em;
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.55em;
+}
+
+@media screen and (min-width: 820px) {
+    body {
+        background-image: linear-gradient(var(--teal), white);
+    }
+
+    header {
+        background-image: none;
+        grid-template-columns: 200px 2fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0px;
+    }
+
+    h1 {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 2.85em;
+        margin-top: .5em;
+    }
+
+    header p {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 5em;
+    }
+
+    header img {
+        width: unset;
+        padding: 1em 0 0 0;
+    }
+
+    nav {
+        grid-row: 2;
+        grid-column: span 3;
+    }
+
+    nav #menu-toggle>label {
+        display: none;
+    }
+
+    #menu-toggle ul {
+        display: unset;
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        gap: 10px;
+        top: -65px;
+        font-weight: 600;
+        font-size: 15px;
+        justify-content: center;
+        margin-top: unset;
+    }
+
+    #menu-toggle a {
+        padding: 0.5em;
+        background-color: white;
+        color: #000;
+    }
+
+    /* Intro Styles */
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        max-width: 85%;
+        margin: auto;
+    }
+
+    #intro p {
+        padding-top: 3em;
+        font-size: 1.2em;
+    }
+
+    #intro h2,
+    #intro p {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2;
+        justify-items: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    #img-grid img:first-of-type {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #img-grid img:nth-of-type(2) {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #img-grid picture {
+        grid-row: 2;
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    #plan {
+        background-color: unset;
+    }
+
+
+    /* Plan Styles */
+    #plan-svg {
+        display: flex;
+        flex-direction: row;
+        max-width: 630px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    #plan section {
+        width: 300px;
+    }
+
+    #testimonials>div {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+        max-width: 630px;
+    }
+
+    #about {
+        background-color: unset;
+    }
+    
+    #about div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        width: 50%;
+        margin: auto;
+    }
+
+    /* Contact Styles */
+    form {
+        display: block;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: auto;
+        max-width: 800px;
+    }
+
+    #contact fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #contact fieldset legend {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #names {
+        grid-column: 1;
+    }
+
+    #nums {
+        grid-column: 2;
+    }
+
+    #selects,
+    #mySubmit {
+        grid-column: 3;
+    }
+
+    #selects {
+        position: relative;
+    }
+
+    #mySubmit {
+        width: 100px;
+        position: absolute;
+        right: 105px;
+        bottom: -5px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: unset;
+    }
+
+    header {
+        background-image: linear-gradient(var(--teal), white);
+        grid-template-columns: 200px 2fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0px;
+    }
+
+    h1 {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 2.85em;
+        margin-top: .5em;
+    }
+
+    header p {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 5em;
+    }
+
+    header img {
+        width: unset;
+        padding: 1em 0 0 0;
+    }
+
+    nav #menu-toggle>label {
+        display: none;
+    }
+
+    #menu-toggle ul {
+        display: unset;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        top: -145px;
+        font-weight: 600;
+        font-size: 15px;
+        justify-content: right;
+        position: absolute;
+    }
+
+    #menu-toggle a {
+        padding: 0.5em;
+        background-color: white;
+        color: #000;
+    }
+
+    /* Intro Styles */
+    #intro {
+        background-color: var(--white);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-width: 85%;
+        margin: auto;
+    }
+
+    #intro p {
+        padding-top: 3em;
+        font-size: 1.2em;
+    }
+
+    #intro h2,
+    #intro p {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2;
+        justify-items: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    #img-grid img:first-of-type {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #img-grid img:nth-of-type(2) {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #img-grid picture {
+        grid-row: 2;
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    #plan {
+        background-color: var(--yellow);
+    }
+
+    #plan-svg {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        flex-wrap: nowrap;
+        max-width: unset;
+        gap: 10px;
+    }
+
+    #testimonials {
+        background-color: var(--white);
+    }
+
+    #testimonials>div {
+        display: flex;
+        max-width: 80%;
+        margin: auto;
+        flex-wrap: nowrap;
+    }
+
+    #about {
+        background-color: var(--blue);
+    }
+
+    #about div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        width: 50%;
+        margin: auto;
+    }
+
+    /* Contact Styles */
+    form {
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: auto;
+        max-width: 1019px;
+    }
+
+    #contact {
+        background-color: var(--white);
+    }
+
+    #contact fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #contact fieldset legend {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #names {
+        grid-column: 1;
+    }
+
+    #nums {
+        grid-column: 2;
+    }
+
+    #selects,
+    #mySubmit {
+        grid-column: 3;
+    }
+
+    #selects {
+        position: relative;
+    }
+
+    #mySubmit {
+        width: 100px;
+        position: absolute;
+        right: 30px;
+        bottom: -5px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 5fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: flex-start;
+        padding-left: 20px;
+    }
+}
